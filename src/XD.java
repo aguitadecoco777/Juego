@@ -34,6 +34,10 @@ public class XD {
                     villano.hacerTrampa();
                     break;
             }
+            if (villano.vida_hp<=0){
+                System.out.println("haz derrotado al jefe ");
+                accion="salir";
+            }
         }
 
         scanner.close();
