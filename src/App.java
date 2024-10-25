@@ -53,8 +53,11 @@ class Villano extends Personaje {
     public Villano(String nombre, int fuerza, int velocidad, int vida_hp) {
         super(nombre, fuerza, velocidad, vida_hp);
     }
-
-    public void hacerTrampa() {
+    public void atacar(Personaje oponente) {
+        oponente.vida_hp -= this.fuerza;
+        System.out.println(this.nombre + " ataca a " + oponente.nombre + " y reduce su vida a " + oponente.vida_hp);
+    }
+    public void buf() {
         this.vida_hp *= 2; // Duplicar vida
         System.out.println(this.nombre + " hace trampa y duplica su vida. Nueva vida: " + this.vida_hp);
     }
