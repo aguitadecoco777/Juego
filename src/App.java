@@ -39,8 +39,12 @@ class SuperHero extends Personaje {
     }
 
     public void recuperarse() {
-        this.vida_hp += 20; // Recupera 20 puntos de vida
-        System.out.println(this.nombre + " se recupera. Nueva vida: " + this.vida_hp);
+        if (vida_hp<100){
+            this.vida_hp += 20; // Recupera 20 puntos de vida
+            System.out.println(this.nombre + " se recupera. Nueva vida: " + this.vida_hp);
+        }else if (vida_hp>=100){
+            System.out.println("no te puedes curar mas");
+        }
     }
 
     @Override
@@ -58,8 +62,8 @@ class Villano extends Personaje {
         System.out.println(this.nombre + " ataca a " + oponente.nombre + " y reduce su vida a " + oponente.vida_hp);
     }
     public void buf() {
-        this.vida_hp *= 2; // Duplicar vida
-        System.out.println(this.nombre + " hace trampa y duplica su vida. Nueva vida: " + this.vida_hp);
+        this.fuerza *= 2; // Duplicar vida
+        System.out.println(this.nombre + " tiene un buf y duplica su fuerza. Nueva fuerza: " + this.fuerza);
     }
 
     @Override
