@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class XD {
+public class dragon_ball {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
